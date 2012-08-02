@@ -1,0 +1,11 @@
+A simple Play2.0 app that only handles timing out of requests. 
+
+Why is this useful? 
+-------------------
+
+- for testing async libraries that need a simple way to create long
+  running server connections
+
+- accessible anywhere due to a very permissive crossdomain.xml file
+  ... well to Flash/Unity/etc plugins 
+
