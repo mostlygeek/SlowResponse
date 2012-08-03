@@ -7,7 +7,7 @@ import play.api.libs.concurrent.Promise
 object Timeout extends Controller {
   
   def index() = Action {
-    Ok("You asked for: ")
+    Ok(views.html.index())
   }
   
   /**

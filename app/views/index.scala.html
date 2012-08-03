@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async HTTP Tester</title>
+</head>
+<body>
+    <h1>About</h1>
+    <p>This is a simple endpoint for testing HTTP async response code. 
+    This server will wait <em>n</em> milliseconds before returning a 
+    regular text response or javascript.</p>
+
+    <ul>
+        <li>
+            <p>Text response - regular text/plain response.</p>
+            <ul>
+                <li><a href="/timeout/0">timeout 0ms</a></li>
+                <li><a href="/timeout/10">timeout 10ms</a></li>
+                <li><a href="/timeout/100">timeout 100ms</a></li>
+                <li><a href="/timeout/1000">timeout 1000ms</a></li>
+                <li><a href="/timeout/5000">timeout 5000ms</a></li>
+                <li><a href="/timeout/10000">timeout 10000ms</a></li>
+            </ul>
+        </li>
+        <li>
+        <p>JavaScript Response - use these in a script tag. These are good 
+        for testing w/ a JSONP style. So they work across domains.</p>
+        <p>You can specify your own callback function as the second parameter. 
+           By default it is <code>alert()</code>.</p>
+            <ul>
+                <li><a href="/timeout.js/0/alert">timeout.js 0ms</a></li>
+                <li><a href="/timeout.js/10/my.fn">timeout.js 10ms</a></li>
+                <li><a href="/timeout.js/100/a.b.c.d">timeout.js  100ms</a></li>
+                <li><a href="/timeout.js/1000">timeout.js  1000ms</a></li>
+                <li><a href="/timeout.js/5000">timeout.js  5000ms</a></li>
+                <li><a href="/timeout.js/10000">timeout.js  10000ms</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
