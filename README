@@ -14,3 +14,7 @@ Why is this useful?
     ... this will return javascript: functionName(time);
     ... so, /timeout.js/1000/alert, will respond, alert(1000)
 
+Trying it out
+-------------
+ 
+   http://slowresponse.heroku.com

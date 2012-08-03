@@ -16,7 +16,7 @@ object Timeout extends Controller {
    */
   def timeout(sleep: Long) = Action {
     SleepThenDo(sleep, x => {
-      Ok("Slept for: " + x + "ms")
+      Ok(x + "ms")
     })
   }
 
@@ -26,12 +26,12 @@ object Timeout extends Controller {
     })
   }
 
-  private def SleepThenDo(sleep: Long, f: (Long) => Result): AsyncResult = {
+  private def SleepThenDo(sleep: Long, fn: (Long) => Result): AsyncResult = {
     val start = System.currentTimeMillis
     Async {
       Promise.timeout[Result]({
         val diff = System.currentTimeMillis - start
-        f(diff)
+        fn(diff)
       }, sleep)
     } 
   }
