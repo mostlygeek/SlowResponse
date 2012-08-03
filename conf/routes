@@ -2,5 +2,7 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 #
-GET       /                           controllers.Timeout.index
-GET       /timeout/$ms<[0-9]{1,5}>    controllers.Timeout.timeout(ms: Long)
+GET       /                                 controllers.Timeout.index
+GET       /timeout/$ms<[0-9]{1,5}>          controllers.Timeout.timeout(ms: Long)
+GET       /timeout.js/$ms<[0-9]{1,5}>       controllers.Timeout.timeoutJS(ms: Long, fn = "alert")
+GET       /timeout.js/$ms<[0-9]{1,5}>/:fn   controllers.Timeout.timeoutJS(ms: Long, fn: String)

@@ -9,3 +9,8 @@ Why is this useful?
 - accessible anywhere due to a very permissive crossdomain.xml file
   ... well to Flash/Unity/etc plugins 
 
+- accessible cross domain on web browsers through loading jsonp style
+  javascript, /timeout.js/:timeout/:functionName 
+    ... this will return javascript: functionName(time);
+    ... so, /timeout.js/1000/alert, will respond, alert(1000)
+
