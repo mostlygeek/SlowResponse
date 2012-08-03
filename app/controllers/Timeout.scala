@@ -26,7 +26,10 @@ object Timeout extends Controller {
     })
   }
 
-  private def SleepThenDo(sleep: Long, fn: (Long) => Result): AsyncResult = {
+  private def SleepThenDo(sleep: Long, fn: (Long) => Result): Result = {
+    
+    if (sleep == 0) return fn(0) // not idiomatic scala, but easier to understand
+
     val start = System.currentTimeMillis
     Async {
       Promise.timeout[Result]({
