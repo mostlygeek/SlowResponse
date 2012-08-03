@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SlowResponse HTML5 Tests</title>
+    <script src="@routes.Assets.at("js/jquery-1.7.1.min.js")"></script>
+    <script src="@routes.Assets.at("js/main.js")"></script>
+    <link rel="stylesheet" type="text/css"
+        href="@routes.Assets.at("stylesheets/test.css")"/>
+</head>
+<body>
+    <a href="/">home</a>
+    <h1>Test of SlowResponse API</h1>
+    <h2>Test Results</h2>
+    <p>This will send off a bunch of async calls that return in a random time
+    between 1500ms and 6500ms</p> 
+    <ul id="results"></ul>
+
+</body>
+</html>

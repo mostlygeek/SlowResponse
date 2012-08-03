@@ -3,9 +3,11 @@
 # ~~~~
 #
 GET       /                                 controllers.Timeout.index
+GET       /test                             controllers.Timeout.test
 GET       /timeout/$ms<[0-9]{1,5}>          controllers.Timeout.timeout(ms: Long)
 GET       /timeout.js/$ms<[0-9]{1,5}>       controllers.Timeout.timeoutJS(ms: Long, fn = "alert")
 GET       /timeout.js/$ms<[0-9]{1,5}>/:fn   controllers.Timeout.timeoutJS(ms: Long, fn: String)
 
 # Serving of static assets
 GET     /crossdomain.xml                    controllers.Assets.at(path="/public", file="crossdomain.xml")
+GET     /assets/*file                       controllers.Assets.at(path="/public", file)

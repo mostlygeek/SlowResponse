@@ -9,6 +9,10 @@ object Timeout extends Controller {
   def index() = Action {
     Ok(views.html.index())
   }
+
+  def test() = Action { 
+    Ok(views.html.test())
+  }
   
   /**
    * All this does is sleep, and then returns the actual amount of time
