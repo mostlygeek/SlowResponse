@@ -32,7 +32,7 @@ object Timeout extends Controller {
       Promise.timeout[Result]({
         val diff = System.currentTimeMillis - start
         fn(diff)
-      }, sleep)
+      }, sleep, java.util.concurrent.TimeUnit.MILLISECONDS)
     } 
   }
 }
